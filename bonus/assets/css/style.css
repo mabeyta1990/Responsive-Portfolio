@@ -8,9 +8,51 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-/* general */
+/* sticky footer styling */
+
+/* http://ryanfait.com/html5-sticky-footer/ */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -105px;
+}
+
+footer,
+.push {
+  height: 105px;
+}
+
+/* end sticky footer styling */
+
+/* start hover styling */
+
+#logo:hover,
+input[type=submit]:hover {
+  background: #5e7f7e;
+}
+
+nav a:hover {
+  color: #5e7f7e;
+}
+
+.social:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* end hover styling */
+
+/* general styling */
 
 .container {
   width: 100%;
@@ -156,48 +198,6 @@ h3,
   border: 1px solid #ddd;
 }
 
-/* portfolio page */
-
-.work {
-  position: relative;
-  float: left;
-  width: 274px;
-  margin: 20px 0 25px;
-  overflow: auto;
-}
-
-.work:nth-child(even) {
-  margin-right: 40px;
-}
-
-.work img {
-  width: 100%;
-  border: 0 none;
-  opacity: 0.8;
-}
-
-.work h3 {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  background: #4aaaa5;
-  border-bottom: 0;
-}
-
-.auth-image {
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  margin-right: 25px;
-}
-
 /* contact page */
 
 #contact-form ul {
@@ -236,125 +236,4 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
-}
-@media screen and (max-width: 640px) {
-    #maincontent {
-        width: 100%;
-        max-width: 640px;
-
-    }
-    .sidebar{
-      width: 100%;
-      max-width: 640px;
-    }
-    #masthead{
-      position: static;
-      width: 100%;
-      max-width: 640px;
-      margin: 0 0 0 0;
-    }
-    #main-container{
-      margin: 0 0 0 0;
-      padding: 10px 0 0 0;
-      display: block;
-      margin: auto;
-      float: left;
-    }
-    #main-container img{
-      float: none;
-      padding-right: 0;
-      margin: auto;
-      
-    }
-    .auth-image{
-      width: 100%;
-    }
-    
-    #logo{
-      max-width: 640px;
-      width: 100%;
-
-    }
-    nav{
-      float: none;
-      width: 100%;
-      max-width: 640px;
-      postition: relative;
-      display: inline-block;
-      text-align: center;
-      margin-top: 0;
-    }
-    nav a{
-      padding: 5% 5% 0 5%;
-      margin: 0 5px 0 5px;
-    }
-    .work img{
-      width: 100%;
-      padding-right: 0;
-      
-    }
-}
-
-@media screen and (max-width: 768px) {
-#maincontent {
-    width: 100%;
-    max-width: 768px;
-}
-.sidebar{
-  width: 100%;
-  max-width: 768px;
-}
-#main-container{
-  margin: 10px 0 0 0;
-}
-.main-section{
-  width: 100%;
-  max-width: 768px;
-}
-nav {
-  margin: 25px 25px 25px 0;
-  display: block;
-}
-#main-container img{
-  margin: auto;
-}
-.main-section{
-  padding: auto;
-}
-#logo{
-  
-}
-
-@media screen and (min-width: 980px) and (max-width:980px){
-  .main-section{
-    width: 100%;
-    max-width: 350;
-    padding: 20px 20px 20px 20px;
-    margin-left: 5%;
-  }
-  #masthead{
-    margin-left: 5%;
-  }
-  #logo{
-    margin-left: 5%;
-    width: 100%;
-  }
-  nav{
-    margin-right: 5%;
-  }
-  .sidebar{
-    margin-right: 5%;
-  }
-  .auth-image{
-    width: 100%;
-  }
-  .work{
-    width: 100%;
-  }
-  .work h3{
-    width: 100%;
-  }
-  #main-container img{
-    padding: 0 0 0 0;
-  }
 }
